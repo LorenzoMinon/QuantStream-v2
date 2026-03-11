@@ -1,0 +1,12 @@
+quantstream:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      port: 5432
+      user: airflow
+      password: airflow
+      dbname: airflow
+      schema: raw
+      threads: 1
