@@ -52,6 +52,7 @@ services:
       _AIRFLOW_WWW_USER_CREATE: 'true'
       _AIRFLOW_WWW_USER_USERNAME: admin
       _AIRFLOW_WWW_USER_PASSWORD: admin123
+      ALPHAVANTAGE_KEY: ${ALPHAVANTAGE_KEY}
 
   airflow-webserver:
     <<: *airflow-common
