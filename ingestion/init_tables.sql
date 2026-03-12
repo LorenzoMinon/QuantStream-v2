@@ -25,3 +25,14 @@ CREATE TABLE IF NOT EXISTS raw.stock_prices_usa (
     inserted_at     TIMESTAMP       NOT NULL DEFAULT NOW(),
     UNIQUE(symbol, date)
 );
+
+CREATE TABLE IF NOT EXISTS raw.exchange_rates (
+    id              SERIAL PRIMARY KEY,
+    date            DATE            NOT NULL,
+    currency_from   VARCHAR(10)     NOT NULL,
+    currency_to     VARCHAR(30)     NOT NULL,
+    rate            NUMERIC(18, 4)  NOT NULL,
+    source          VARCHAR(20)     NOT NULL DEFAULT 'bcra',
+    inserted_at     TIMESTAMP       NOT NULL DEFAULT NOW(),
+    UNIQUE(date, currency_from, currency_to)
+);
