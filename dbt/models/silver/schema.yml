@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: prices
+    description: "All price sources unified"
+    columns:
+      - name: asset
+        description: "Asset symbol"
+        tests:
+          - not_null
+      - name: price
+        description: "Closing price"
+        tests:
+          - not_null
+      - name: asset_type
+        description: "Type of asset"
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['crypto', 'stock_usa', 'stock_ar', 'fx']
+
+  - name: portfolio
+    description: "Portfolio positions enriched with current prices"
+    columns:
+      - name: asset
+        tests:
+          - not_null
+          - unique
+      - name: quantity
+        tests:
+          - not_null
