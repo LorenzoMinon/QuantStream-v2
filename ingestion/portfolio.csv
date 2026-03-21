@@ -1,5 +1,5 @@
 asset,asset_type,quantity,buy_price,buy_currency,buy_date,notes
-BTC,crypto,0.1,75000,USD,2026-01-15,compra binance
+BTCUSDT,crypto,0.1,75000,USD,2026-01-15,compra binance
 SUPV,stock_ar,100,350,ARS,2024-03-10,compra iol
 AAPL,stock_usa,2,180,USD,2024-06-01,compra iol
 YPF,stock_ar,50,6500,ARS,2024-09-20,compra iol

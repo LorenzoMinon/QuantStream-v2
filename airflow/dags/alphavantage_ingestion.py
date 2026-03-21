@@ -7,7 +7,7 @@ import time
 from airflow.models import Variable
 
 ALPHAVANTAGE_KEY = Variable.get("ALPHAVANTAGE_KEY")
-SYMBOLS = ["AAPL", "GOOGL", "MSFT"]
+SYMBOLS = ["AAPL", "GOOGL", "MSFT", "SUPV", "YPF"]
 
 
 def fetch_and_insert_stocks():
