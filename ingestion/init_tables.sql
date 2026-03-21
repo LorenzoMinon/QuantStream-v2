@@ -36,3 +36,15 @@ CREATE TABLE IF NOT EXISTS raw.exchange_rates (
     inserted_at     TIMESTAMP       NOT NULL DEFAULT NOW(),
     UNIQUE(date, currency_from, currency_to)
 );
+
+CREATE TABLE IF NOT EXISTS raw.portfolio (
+    id              SERIAL PRIMARY KEY,
+    asset           VARCHAR(20)     NOT NULL,
+    asset_type      VARCHAR(20)     NOT NULL,
+    quantity        NUMERIC(18, 8)  NOT NULL,
+    buy_price       NUMERIC(18, 4)  NOT NULL,
+    buy_currency    VARCHAR(10)     NOT NULL,
+    buy_date        DATE            NOT NULL,
+    notes           VARCHAR(200),
+    inserted_at     TIMESTAMP       NOT NULL DEFAULT NOW()
+);
