@@ -15,3 +15,13 @@ variable "db_password" {
   type        = string
   sensitive   = true
 }
+
+variable "my_ip" {
+  description = "Your public IP address for SSH access (format: x.x.x.x/32)"
+  type        = string
+}
+
+variable "aws_account_id" {
+  description = "AWS account ID used for unique bucket naming"
+  type        = string
+}
