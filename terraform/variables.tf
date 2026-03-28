@@ -25,3 +25,9 @@ variable "aws_account_id" {
   description = "AWS account ID used for unique bucket naming"
   type        = string
 }
+
+variable "public_key_path" {
+  description = "Path to the public SSH key for EC2 access"
+  type        = string
+  default     = "~/.ssh/quantstream.pub"
+}
